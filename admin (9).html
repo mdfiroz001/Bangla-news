@@ -330,8 +330,14 @@ table.admin-table{width:100%;border-collapse:collapse}
 import{initializeApp}from"https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import{getDatabase,ref,get,set,push,update,remove}from"https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
 import{getAuth,onAuthStateChanged,signInWithEmailAndPassword,signOut}from"https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
-const cfg={apiKey:"AIzaSyDelQagSA4CzP_j7zpLTe8HLqD8dCHzgtE",authDomain:"mk-grexai.firebaseapp.com",databaseURL:"https://mk-grexai-default-rtdb.firebaseio.com",projectId:"mk-grexai",storageBucket:"mk-grexai.firebasestorage.app",messagingSenderId:"728764432838",appId:"1:728764432838:web:b1d6262fdd99c2bcd1f2c7"};
-const app=initializeApp(cfg),db=getDatabase(app),auth=getAuth(app);
+const cfg={apiKey: "AIzaSyD7ZB4kPCirepGNwm3H11Et6aj8O7NuZmo",
+  authDomain: "taskster-app.firebaseapp.com",
+  databaseURL: "https://taskster-app-default-rtdb.firebaseio.com",
+  projectId: "taskster-app",
+  storageBucket: "taskster-app.firebasestorage.app",
+  messagingSenderId: "290299122448",
+  appId: "1:290299122448:web:8e8c8988b5f7f3a693cb95",
+};const app=initializeApp(cfg),db=getDatabase(app),auth=getAuth(app);
 let adminUser=null,adminProfile={},allGames={},allLDPages={},allUsers={};
 const $=id=>document.getElementById(id),esc=s=>{const d=document.createElement('div');d.textContent=String(s||'');return d.innerHTML};
 function showModal(h){$('modalBox').innerHTML=h;$('modalOv').classList.add('show')}
